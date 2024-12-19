@@ -16,12 +16,6 @@ body {
     width: 100%;
   }
   
-  main {
-    display: flex;
-    width: 90%;
-    margin-top: 1rem;
-  }
-  
   #sidebar {
     width: 25%;
     background-color: #ffffff;
