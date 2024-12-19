@@ -5,55 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flatdango</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <h1>Flatdango</h1>
     <p>Your one-stop app for movie tickets!</p>
-    <!-- Settings Icon -->
-  <button id="settings-button" aria-label="Settings">
-    ⚙️
-  </button>
-  </header>
-  <!-- Settings Modal -->
-<div id="settings-modal" class="hidden">
-    <div class="modal-content">
-      <h2>Settings</h2>
-      <div class="tabs">
-        <button class="tab-button active" data-tab="about-us">About Us</button>
-        <button class="tab-button" data-tab="contact-info">Contact Info</button>
-        <button class="tab-button" data-tab="login-info">Login Info</button>
-      </div>
-      <div id="about-us" class="tab-content active">
-        <p><strong>About Us:</strong> Flatdango is your go-to platform for easy and seamless movie ticket purchases!</p>
-      </div>
-      <div id="contact-info" class="tab-content">
-        <p><strong>Contact Info:</strong></p>
-        <p>Email: support@flatdango.com</p>
-        <p>Phone: +1 234 567 890</p>
-      </div>
-      <div id="login-info" class="tab-content">
-        <p><strong>Login Information:</strong> Access your account to manage your bookings. Use the login form to sign in.</p>
-      </div>
-      <button id="close-modal">Close</button>
+    <header>
+        <nav>
+            <h1>Movie Theatre</h1>
+            <input type="search" id="search" placeholder="Search movies...">
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Movie List</h2>
+            <ul id="films"></ul>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content">
+            <div id="details">
+                <h2 id="title">Movie Title</h2>
+                <img id="poster" src="" alt="Movie Poster">
+                <p><strong>Runtime:</strong> <span id="runtime"></span> mins</p>
+                <p><strong>Showtime:</strong> <span id="showtime"></span></p>
+                <p><strong>Available Tickets:</strong> <span id="tickets"></span></p>
+                <button type="button" id="buy">Buy Ticket</button>
+            </div>
+        </main>
     </div>
-  </div>
-  <main>
-    <div id="sidebar">
-      <h2>Movies</h2>
-      <ul id="movies-list"></ul>
-    </div>
-    <div id="main-content">
-      <div id="movie-details">
-        <h2 id="movie-title">Select a Movie</h2>
-        <img id="movie-poster" src="" alt="Movie Poster">
-        <p id="movie-description"></p>
-        <p><strong>Runtime:</strong> <span id="movie-runtime"></span> mins</p>
-        <p><strong>Available Tickets:</strong> <span id="available-tickets"></span></p>
-        <button id="buy-ticket">Buy Ticket</button>
-      </div>
-    </div>
-  </main>
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Flatiron Movie Theater. All Rights Reserved.</p>
+    </footer>
+    <script>fetch('./db.json')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+    });
+    </script>
 </body>
 </html>
