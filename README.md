@@ -16,7 +16,8 @@ This project is a simple web application that allows users to view movies and pu
   If a movie is sold out, the interface reflects that by changing the button text to "Sold Out" and applying a sold-out class to the corresponding movie item.
 
 
-Table of Contents:
+#Table of Contents:
+
 Technologies Used
 
 Features
@@ -26,7 +27,7 @@ Installation
 License
 
 
-Technologies Used
+#Technologies Used
 
 Javascript
 
@@ -35,7 +36,7 @@ CSS
 HTML
 
 
-Features
+#Features
 
 Film List: Displays a list of movies fetched from a server.
 
@@ -46,7 +47,7 @@ Movie Details: Displays details of a selected movie, including the title, poster
 Ticket Purchase: Users can buy tickets for a movie, and the available tickets are updated dynamically.
 
 
-Installation
+#Installation
 
 Fork and Clone the repository:
 
@@ -61,7 +62,7 @@ Ensure the API server is running at http://localhost:3000/films.
 Open index.html in your web browser.
 
 
-Fork the repository
+#Fork the repository
 
 Create a new branch
 
