@@ -10,7 +10,34 @@
   <header>
     <h1>Flatdango</h1>
     <p>Your one-stop app for movie tickets!</p>
+    <!-- Settings Icon -->
+  <button id="settings-button" aria-label="Settings">
+    ⚙️
+  </button>
   </header>
+  <!-- Settings Modal -->
+<div id="settings-modal" class="hidden">
+    <div class="modal-content">
+      <h2>Settings</h2>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="about-us">About Us</button>
+        <button class="tab-button" data-tab="contact-info">Contact Info</button>
+        <button class="tab-button" data-tab="login-info">Login Info</button>
+      </div>
+      <div id="about-us" class="tab-content active">
+        <p><strong>About Us:</strong> Flatdango is your go-to platform for easy and seamless movie ticket purchases!</p>
+      </div>
+      <div id="contact-info" class="tab-content">
+        <p><strong>Contact Info:</strong></p>
+        <p>Email: support@flatdango.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
+      <div id="login-info" class="tab-content">
+        <p><strong>Login Information:</strong> Access your account to manage your bookings. Use the login form to sign in.</p>
+      </div>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
   <main>
     <div id="sidebar">
       <h2>Movies</h2>
