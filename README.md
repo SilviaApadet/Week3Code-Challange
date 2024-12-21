@@ -57,7 +57,7 @@ Navigate to the project directory:
 
 cd week3-code-challenge
 
-Ensure the API server is running at http://localhost:3000/films.
+Ensure the API server is running at http://localhost:3000/Films.
 
 Open index.html in your web browser.
 
