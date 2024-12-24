@@ -1,4 +1,4 @@
-const filmsList = document.querySelector("#films");
+const filmsList = document.querySelector("#Films");
 const title = document.getElementById("title");
 const poster = document.getElementById("poster");
 const runtime = document.getElementById("runtime");
@@ -10,7 +10,7 @@ const searchInput = document.querySelector('#search');
 let currentFilmTickets = 0;
 
 // Fetch and display film list
-fetch('http://localhost:3000/films')
+fetch('http://localhost:3000/Films')
   .then(res => res.json())
   .then(Films => {
     Films.forEach(film => {
@@ -36,7 +36,7 @@ fetch('http://localhost:3000/films')
 
 // Fetch film by ID
 function fetchFilmById(id) {
-  fetch(`http://localhost:3000/films/${id}`)
+  fetch(`http://localhost:3000/Films/${id}`)
     .then(res => res.json())
     .then(film => {
       showFilmDetails(film);
