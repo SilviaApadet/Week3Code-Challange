@@ -1,31 +1,29 @@
-{
- "Films" : [
-    {
-      "id": 1,
-      "title": "The Grand Adventure",
-      "description": "An epic journey through uncharted lands.",
-      "poster": "https://via.placeholder.com/400x600",
-      "runtime": 120,
-      "capacity": 100,
-      "ticketsSold": 50
-    },
-    {
-      "id": 2,
-      "title": "Romance in the Rain",
-      "description": "A love story that blossoms in the rain.",
-      "poster": "https://via.placeholder.com/400x600",
-      "runtime": 95,
-      "capacity": 50,
-      "ticketsSold": 20
-    },
-    {
-      "id": 3,
-      "title": "Galaxy Wars",
-      "description": "The ultimate battle for space domination.",
-      "poster": "https://via.placeholder.com/400x600",
-      "runtime": 140,
-      "capacity": 200,
-      "ticketsSold": 180
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "The Grand Adventure",
+    "description": "An epic journey through uncharted lands.",
+    "poster": "https://via.placeholder.com/400x600",
+    "runtime": 120,
+    "capacity": 100,
+    "ticketsSold": 50
+  },
+  {
+    "id": 2,
+    "title": "Romance in the Rain",
+    "description": "A love story that blossoms in the rain.",
+    "poster": "https://via.placeholder.com/400x600",
+    "runtime": 95,
+    "capacity": 50,
+    "ticketsSold": 20
+  },
+  {
+    "id": 3,
+    "title": "Galaxy Wars",
+    "description": "The ultimate battle for space domination.",
+    "poster": "https://via.placeholder.com/400x600",
+    "runtime": 140,
+    "capacity": 200,
+    "ticketsSold": 180
+  }
+]
