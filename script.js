@@ -11,7 +11,7 @@ let currentFilmTickets = 0;
 fetch('./db.json')
   .then(res => res.json())
   .then(data => {
-    const Films = data.Films; // Assuming `Films` is an array in db.json
+    const Films = data.Films; // Assuming Films is the array in db.json
     if (Films.length === 0) {
       filmsList.innerHTML = `<li>No films available.</li>`;
       return;
@@ -22,9 +22,8 @@ fetch('./db.json')
       const li = document.createElement("li");
       li.innerHTML = `
         <div class="card">
-          <img src="${film.poster}" alt="${film.title}">
+          <img src="${film.poster}" alt="${film.title}" class="film-poster">
           <h3>${film.title}</h3>
-          <p>${film.description}</p>
         </div>
       `;
       li.classList.add("item");
@@ -46,9 +45,9 @@ fetch('./db.json')
 function showFilmDetails(film) {
   title.textContent = film.title;
   poster.src = film.poster;
+  poster.alt = `${film.title} Poster`; // Update alt text for accessibility
   runtime.textContent = `${film.runtime} mins`;
-  showtime.textContent = film.showtime;
-  currentFilmTickets = film.capacity - film.tickets_sold;
+  currentFilmTickets = film.capacity - film.ticketsSold; // Calculate available tickets
   tickets.textContent = currentFilmTickets;
 
   // Disable buy button if no tickets are available
@@ -67,6 +66,10 @@ buyTicket.addEventListener("click", () => {
   if (currentFilmTickets > 0) {
     currentFilmTickets -= 1;
     tickets.textContent = currentFilmTickets;
+
+    // Simulate updating the tickets sold in the backend
+    // In a real application, this would involve a PATCH/PUT request to update the server
+    console.log(`Ticket purchased for: ${title.textContent}`);
 
     if (currentFilmTickets === 0) {
       alert("This showing is sold out!");
